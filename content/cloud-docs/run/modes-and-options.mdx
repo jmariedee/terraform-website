@@ -47,6 +47,13 @@ The [replace option](/cli/commands/plan#replace-address) instructs Terraform to 
 - **CLI:** Use `terraform plan -replace=ADDRESS` or `terraform apply -replace=ADDRESS`.
 - **API:** Use the `replace-addrs` option.
 
+## No-Operation Apply
+
+A no-operation apply can be used to upgrade a Terraform Cloud workspace's latest state version to the desired Terraform version. Furthermore, no new configuration version needs to be uploaded in order to create a run in this mode.
+
+- **API:** Set the `allow-empty-apply` field to `true`.
+- **UI:** Use the "Start new plan" action from a workspace's "Actions" menu, then check the "Allow Empty Apply" box in the new plan dialog.
+
 ## Targeted Plan and Apply
 
 -> **Version note:** Targeting support is available in Terraform Enterprise v202006-1 or later.
